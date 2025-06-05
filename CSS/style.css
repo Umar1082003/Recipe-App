@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+:root {
+    --primaryColor: #595dae;
+    --subColor: #000;
+    --whiteColor: #ffffff;
+}
+body {
+    font-family: monospace;
+    background-color: #eaeaeafe;
+    height: 100%;
+    width: 100%;
+}
+.showDetails {
+    display: none;
+}
+.search-area {
+    background-color: var(--primaryColor);
+    width: 40%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.search-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    flex-wrap: wrap;
+    padding: 0 15px;
+}
+.search-content > h2 {
+    display: block;
+    margin-bottom: 20px;
+    color:var(--whiteColor);
+    font-size: 35px;
+    text-transform: capitalize;
+}
+.search-content > input {
+    width: 80%;
+    height: 40px;
+    border: 0;
+    outline: 0;
+    padding: 20px;
+    color: var(--primaryColor);
+    border-radius: 5px;
+}
+.search-content > button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    background-color: var(--subColor);
+    cursor: pointer;
+}
+.search-content > button > i{
+    font-size: 18px;
+    color: var(--primaryColor);
+}
+.search-content > button:hover {
+    opacity: 0.7;
+}
+.content-area {
+    width: 60%;
+    position: absolute;
+    right: -20px;
+    border-radius: 5px;
+    padding: 50px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2%;
+}
+.cart {
+    width: 49%;
+    background-color: var(--whiteColor);
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 16px;
+}
+.cart .img {
+    width: 100%;
+}
+.cart .img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px 15px 0 0;
+}
+.cart .cart-details > h3 {
+    padding: 30px 0 10px 0;
+    text-transform: capitalize;
+} 
+.cart .cart-details > button {
+    padding: 12px 45px;
+    border: 0;
+    cursor: pointer;
+    background-color: var(--primaryColor);
+    text-transform: capitalize;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--whiteColor);
+    border-radius: 40px;
+    font-size: large;
+    margin-bottom: 30px;
+}
+.recipe-details {
+    background-color: var(--primaryColor);
+    position: absolute;
+    width: 42%;
+    height: 100vh;
+    position: fixed;
+    padding: 80px 25px;
+    overflow-y: scroll;
+}
+.recipe-details > * {
+    margin-bottom: 25px;
+}
+.recipe-details > i {
+    position: absolute;
+    left: 90%;
+    top: 20px;
+    font-size: 22px;
+    background-color: var(--whiteColor);
+    color: var(--primaryColor);
+    padding: 7px 10px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.recipe-details > h2 {
+    font-size: 30px;
+    color: var(--whiteColor);
+    text-transform: capitalize;
+}
+.recipe-details > p {
+    font-size: 18px;
+    color: var(--whiteColor);
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+.recipe-details > a {
+    color: var(--whiteColor);
+    border-bottom: 2px solid var(--whiteColor);
+}
+@media (max-width: 768px){
+    .content-area {
+        width: 60%;
+        position: absolute;
+        right: 0px;
+        padding: 30px 20px;
+        column-gap: 1%;
+    }
+    .cart .cart-details > button {
+        padding: 8px 25px;
+        margin-bottom: 25px;
+    }
+}
+@media (max-width: 615px) {
+    .search-content > input {
+        width: 100%;
+        padding: 15px;
+    }
+    .search-content > button {
+        padding: 8px;
+        margin: 15px 0;
+    }
+    .cart {
+        width: 100%;
+    }
+}
+@media (max-width: 321px){
+    .search-content > h2 {
+        font-size: 30px;
+    }
+}
